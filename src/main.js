@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import { getRouter } from './routes/router'
+import Alert from './components/alert/alert.js'
+
 Vue.config.productionTip = false
+Vue.prototype.$alert = Alert
 
 const router = getRouter()
 Vue.use(VueRouter)
