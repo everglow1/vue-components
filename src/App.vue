@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- form表单 -->
-     <i-form ref="form" :model="formValidate" :rules="ruleValidate">
+     <!-- <i-form ref="form" :model="formValidate" :rules="ruleValidate">
       <i-form-item label="用户名" prop="name">
         <i-input v-model="formValidate.name"></i-input>
       </i-form-item>
@@ -11,16 +11,20 @@
     </i-form>
 
     <button @click="handleSubmit">提交</button>
-    <button @click="handleReset">重置</button>
+    <button @click="handleReset">重置</button> -->
+
+    <!-- display 编辑 -->
+    <display></display>
   </div>
 </template>
 
 <script>
 // Vue.js 的组件渲染顺序是由内而外的，所以 FormItem 要先于 Form 渲染
-import iForm from './components/v-form/i-form.vue'
-import iFormItem from './components/v-form/i-form-item.vue'
-import iInput from './components/v-form/i-input.vue'
+// import iForm from './components/v-form/i-form.vue'
+// import iFormItem from './components/v-form/i-form-item.vue'
+// import iInput from './components/v-form/i-input.vue'
 
+import Display from './views/display'
 export default {
   name: 'App',
   provide() {
@@ -56,9 +60,10 @@ export default {
     // componentA,
     // // componentB
     // VDispatch
-    iForm,
-    iFormItem,
-    iInput
+    // iForm,
+    // iFormItem,
+    // iInput,
+    Display
   },
   mounted() {
     
