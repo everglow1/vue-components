@@ -5,10 +5,12 @@ import App from './App'
 import VueRouter from 'vue-router'
 import { getRouter } from './routes/router'
 import Alert from './components/alert/alert.js'
+import toast from './components/toast/toast.js'
 
 Vue.config.productionTip = false
 Vue.prototype.$alert = Alert
 
+Vue.use(toast)
 const router = getRouter()
 Vue.use(VueRouter)
 /* eslint-disable no-new */

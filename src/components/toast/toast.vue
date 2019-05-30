@@ -8,7 +8,37 @@
 
 <script>
 export default {
-  name: 'toast'
+  name: 'toast',
+  data() {
+    return  {
+      visible: false,
+    }
+  },
+  props: {
+    duration: {
+      type: Number,
+      default: 2000
+    },
+    message: {
+      type: String,
+      default: '网络错误'
+    }
+  },
+  methods: {
+    open() {
+      this.visible = true
+
+      if(this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => {
+        this.visible = false
+      }, this.duration);
+    },
+    close() {
+      this.visible = false
+    }
+  }
 }
 </script>
 

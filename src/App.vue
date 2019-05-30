@@ -95,9 +95,10 @@ export default {
       });
     },
     handleOpen2() {
-      // this.$Alert.info({
-      //   content: '我是提示信息 2'
-      // });
+      this.$toast({
+        duration: 30000,
+        message: '你的名字'
+      })
     }
   }
 }
